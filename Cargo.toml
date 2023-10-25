@@ -1,0 +1,22 @@
+[package]
+name = "filecryptor-rs"
+description = "A a tool for encrypting, and decrypting file"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "filecryptor"
+path = "bin/main.rs"
+
+[dependencies]
+aes-gcm = "0.10"
+aws-config = "0.56"
+aws-sdk-ssm = "0.33"
+aws-types = "0.56"
+clap = { version = "4.4", features = ["derive", "env"] }
+fastrand = "2"
+hex = "0.4"
+pbkdf2 = "0.12"
+rand_core = "0.6"
+sha1 = "0.10"
+tokio = { version = "1", features = ["full"] }
